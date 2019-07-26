@@ -1,0 +1,60 @@
+<% include header.ejs %>
+    <div id="dang_ki">
+		<form onsubmit="return CheckPass()" method="post" action="/register">
+			<h2>Đăng kí tài khoản</h2>
+			<p style="font-weight: bold; font-size: 20px;">Thông tin tài khoản</p>
+			<table class="dang_ki1">
+				<tbody>
+					<tr>
+						<td>Email<span class="required">*</span></td>
+						<td><input type="email" name="email" size="40" required="required"></td>
+					</tr>
+					<tr>
+						<td>Mật khẩu <span class="required">*</span></td>
+						<td><input type="password" name="password"size="40" id="pass" required="required"></td>
+					</tr>
+					<tr>
+						<td>Nhập lại mật khẩu</td>
+						<td><input type="password" name=""size="40" id="passConfirm"></td>
+					</tr>
+				</tbody>
+			</table>
+			<p style="font-weight: bold;font-size: 20px;">Thông tin cá nhân</p>
+			<table class="dang_ki1">
+				<tbody>
+					<tr>
+						<td>Họ và Tên<span class="required">*</span></td>
+						<td><input type="text" name="username"size="40" required="required" ></td>
+					</tr>
+					<tr>
+						<td>Giới tính</td>
+						<td><input type="radio" name="gender" value="Nam" required="required"> Nam <input type="radio" name="gender" value="Nữ" required="required"> Nữ</td>
+					</tr>
+					<tr>
+						<td>Số điện thoại<span class="required">*</span></td>
+						<td><input type="tel" name="phone"size="40" required="required"></td>
+					</tr>
+					<tr>
+						<td>Địa chỉ<span class="required">*</span></td>
+						<td><input type="text" name="address"size="40" required="required"></td>
+					</tr>
+					<tr>
+						<td colspan="2" style="text-align: center;"><button type="submit" style="padding: 10px 30px;background-color: #31b0d5;border-radius: 5px; margin-top: 35px;">Đăng kí</button></td>
+					</tr>
+				</tbody>
+			</table>
+		</form>		
+	</div>
+<% include footer.ejs %>
+<script type="text/javascript">
+    function CheckPass(){
+        var pass=document.getElementById('pass').value;
+        var passConf=document.getElementById('passConfirm').value;
+        if(pass!=passConf){
+            alert('Mật khẩu không trùng khớp !');
+            return false;
+        }else{
+            return true;
+        }
+    }
+</script>

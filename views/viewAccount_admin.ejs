@@ -1,0 +1,36 @@
+<% include header_admin %>
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <!-- Page Title Header Ends-->
+            <div class="row">   
+                <div class="col-12">
+                    <table class="table table-striped table-inverse table-responsive">
+                            <tbody>
+                                
+                                    <tr>
+                                        <th>Email</th>
+                                        <th>Họ và tên</th>
+                                        <th>Password</th>
+                                        <th>Ảnh đại diện</th>
+                                        <th>Action</th>
+                                    </tr>
+                                    <% dulieu.forEach(function(item){ %>
+                                    <tr>
+                                        <td><%=item.email %></td>    
+                                        <td><%=item.fullname %></td> 
+                                        <td><%=item.password %></td>
+                                        <td><img src="/image_admin/<%= item.avtimg %>" alt=""></td>
+                                        <td><a href="/editAccount_admin/<%= item._id %>"><i class="fa fa-edit" style="font-size: 20px"></i></a> /
+                                           <a href="/remove/<%= item._id%>" onclick="return xacnhan()"><i style="font-size: 20px" class="fa fa-trash"></i></a>
+                                        </td> 
+                                    </tr>
+                                    <% }) %>
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+          </div>
+          <!-- content-wrapper ends -->
+          <!-- partial:partials/_footer.html -->
+<% include footer_admin  %>

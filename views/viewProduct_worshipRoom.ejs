@@ -1,0 +1,20 @@
+<% include header %>
+    <div class="contener">
+        <div class="row">
+            <% dulieu.forEach(function(item){ %>
+                <div class="col-3" style="margin-top: 20px;padding: 0 40px;">
+                    <img src="/anhsp/<%= item.anhsp %>" width="300px" height="300px">
+                    <h6><span style="font-weight: bold">Tên sản phẩm:</span><%= item.tensp %></h6>
+                    <h6><span style="font-weight: bold">Giá:</span><%= item.gia %></h6>
+                    <h6><span style="font-weight: bold">Thêm vào giỏ:</span><a href="/order/<%= item._id %>"><i class="fa fa-shopping-cart" style="font-size: 30px;color:aqua;"></i></a></h6>
+                </div>
+            <% }) %>  
+        </div>
+        <nav aria-label="Page navigation" style="margin-left: 600px">
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="/showProduct?page=1">1</a></li>
+            <li class="page-item"><a class="page-link" href="/showProduct?page=2">2</a></li>
+          </ul>
+        </nav>
+    </div>
+<% include footer %>

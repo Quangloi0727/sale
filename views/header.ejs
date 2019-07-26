@@ -1,0 +1,69 @@
+
+<!doctype html>
+    <html lang="en">
+      <head>
+        <title><%= title %></title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="/stylesheets/giaodien.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      </head>
+      <body>
+              <!-- Phần 1 sologan-->
+	<div id="banner" style="display: flex">
+		<p>Làng nghề MỘC KÊNH-Chuyên sản xuất,buôn bán các loại đồ gỗ cao cấp</p>
+		<div id="menu_banner">
+			<ul>
+				<li><a href="/login">Đăng nhập</a></li>
+				<li><a href="/register">Đăng kí</a></li>
+				<li><a href="/cart">Giỏ Hàng<span style="border-radius: 50%;background-color: white;
+				padding: 2px 6px;position: relative;top: -10px;color: red;"><%= sl%></span></a></li>
+				<li><a href="" style="padding: 15px 14px"><i class="fa fa-user" aria-hidden="true" style="color: white;font-size:20px"> <span style="font-size: 15px;">Hi ,<%= fullname %></span></i></a>
+					<ul id="logout">
+						<li><a href="/logout">Đăng xuất</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- Phần 2 logo-->
+	<div id="inside_banner">
+		<div id="image"><img src="/images/logo1.png" width="200px" height="150px;" style="border-radius: 20px;position: relative;left: 130px;"></div>
+		<div id="hotline">
+			<p><i class="fa fa-phone" style="color: #e5a535;font-size: 40px;"></i> <span style="color: #e5a535; font-size: 20px;">Hotline:0125.367.2688</span></p>
+		</div>
+		<div id="search">
+			<p><input type="search" placeholder="Tìm kiếm..." style="padding: 10px 45px; border-radius: 10px;background-color: #533115;border: none;"><i class="fa fa-search" style="width: 40px; height: 42px; border-radius: 50%; background-color: #b77731; text-align: center; line-height: 40px;position: relative;right: 20px;"></i></p>
+		</div>
+	</div>
+	<!-- Phần 3 menu -->
+	<div id="nav">
+		<ul>
+			<li style="border-left: none;margin-left: 50px; background-color: #533115;"><a href="/">Trang chủ</a></li>
+			<li><a href="">Giới thiệu</a></li>
+			<li><a href="">Tin tức</a></li>
+			<li><a href="/showProduct">Sản phẩm <i class="btn-dropdown fa fa-chevron-down"></i></a>
+				<ul id="nav2">
+					<li><a href="/showProduct_livingRoom">Nội thất phòng khách</a></li>
+					<li><a href="/showProduct_bedRoom">Nội thất phòng ngủ</a></li>
+					<li><a href="showProduct_worshipRoom">Nội thất phòng thờ,cúng</a></li>
+					<li><a href="/showProduct_diningRoom">Nội thất phòng ăn</a></li>
+					<li><a href="">Các sản phẩm khác</a></li>
+				</ul>
+			</li>
+			<li><a href="">Video</a></li>
+			<li><a href="">Album ảnh</a></li>
+			<li><a href="">Tuyển dụng</a></li>
+			<li style="border-right: none;"><a href="">Liên hệ</a></li>
+		</ul>
+    </div>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      </body>
+    </html>

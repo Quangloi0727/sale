@@ -1,0 +1,35 @@
+<%include header_admin%>
+     <div class="main-panel">
+          <div class="content-wrapper">
+            <!-- Page Title Header Ends-->
+            <table class="table table-striped table-inverse table-responsive">
+                <thead class="thead-inverse">
+                    <tr>
+                        <th>Tên khách hàng</th>
+                        <th>Số điện thoại</th>
+                        <th>Địa chỉ</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Số lượng</th>
+                        <th>Giá</th>
+                        <th>Tổng tiền</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <%  dulieu.forEach(function(item){ %>
+                            <tr>
+                                <td><%= item.fullname %></td>
+                                <td><%= item.phone %></td>
+                                <td><%= item.address %></td>
+                                <td><%= item.tensp %></td>
+                                <td><%= item.soluong %></td>
+                                <td><%= item.giasp %></td>
+                                <td><%= item.tongtien %></td>
+                            </tr>
+                       <% })%>
+                        
+                    </tbody>
+            </table>
+            </div>
+          </div>
+        </div>
+<% include footer_admin%>

@@ -1,0 +1,38 @@
+<% include header %>
+    <div class="contener">
+        <div class="row">
+            <% dulieu.forEach(function(item){ %>
+                <div class="col-3" style="margin-top: 20px;padding: 0 40px;">
+                    <img src="/anhsp/<%= item.anhsp %>" width="300px" height="300px">
+                </div>
+                <div class="col-6" style="margin-top: 50px;">
+                    <form action="/order/<%=item._id%>" method="post">
+                        <h3><span style="font-weight: bold">Tên sản phẩm:</span><%= item.tensp %></h3>
+                        <h3><span style="font-weight: bold">Giá:</span><%= item.gia %></h3>
+                        <h3><span style="font-weight: bold">Số lượng:
+                            <input type="button" value="-" onclick="giam()">
+                            <input type="text" value="1" id="sl" style="width: 55px;text-align: center" name="sl">
+                            <input type="button" value="+" onclick="tang()">
+                        </h3>
+                       <button type="submit" style="padding: 10px 20px;background-color: aqua">Đặt hàng</button>
+                    </form>
+                </div>
+        
+            <% }) %>  
+        </div>
+    </div>
+    <script type="text/javascript">
+        function tang(){
+            var slt=document.getElementById('sl').value;
+            document.getElementById('sl').value=parseInt(slt)+1;
+        }
+         function giam(){
+            var slg=document.getElementById('sl').value;
+            if(slg==0){
+                document.getElementById('sl').value=0;
+            }else{
+                document.getElementById('sl').value=parseInt(slg)-1;
+            }       
+        }
+    </script>
+<% include footer %>
